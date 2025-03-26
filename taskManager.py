@@ -1,5 +1,5 @@
-# ukoly = ['ukol 1 - teeeeest', 'ukol 2 - ahooooj']
-ukoly = []
+ukoly = ['ukol 1 - teeeeest', 'ukol 2 - ahooooj']
+# ukoly = []
 
 def hlavni_menu():
     print()
