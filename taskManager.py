@@ -2,16 +2,22 @@ ukoly = ['ukol 1 - teeeeest', 'ukol 2 - ahooooj']
 # ukoly = []
 
 def hlavni_menu():
-    print()
-    print('Správce úkolů - Hlavní menu')
-    print('1. Přidat nový úkol')
-    print('2. Zobrazit všechny úkoly')
-    print('3. Odstranit úkol')
-    print('4. Konec programu')
-
     while True:
-        volba = int(input('Vyberte možnost (1-4) ').strip())
         print()
+        print('Správce úkolů - Hlavní menu')
+        print('1. Přidat nový úkol')
+        print('2. Zobrazit všechny úkoly')
+        print('3. Odstranit úkol')
+        print('4. Konec programu')
+
+        try:
+            volba = int(input('Vyberte možnost (1-4) '))
+            print()
+        except ValueError:
+            print()
+            print("Neplatné číslo, zkuste to znova")
+            continue
+
 
         if volba == 1:
             return pridat_ukol()
