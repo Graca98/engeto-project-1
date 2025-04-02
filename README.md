@@ -1,0 +1,1 @@
+Jednoduchá Python aplikace pro správu úkolů, která obsahuje čtyři základní funkce: hlavní menu, přidání, zobrazení a odstranění úkolů. Součástí projektu je také Excelová tabulka popisující testovací scénáře pro každou z těchto funkcí.
