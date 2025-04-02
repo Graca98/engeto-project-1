@@ -1,5 +1,5 @@
-ukoly = ['ukol 1 - teeeeest', 'ukol 2 - ahooooj']
-# ukoly = []
+ukoly = []
+# ukoly = ['ukol 1 - teeeeest', 'ukol 2 - ahooooj']
 
 def hlavni_menu():
     while True:
@@ -17,7 +17,6 @@ def hlavni_menu():
             print()
             print("Neplatné číslo, zkuste to znova")
             continue
-
 
         if volba == 1:
             return pridat_ukol()
@@ -38,9 +37,12 @@ def pridat_ukol():
         popis = input('Zadejte popis úkolu: ').strip()
 
         if nazev == "" or popis == "":
+            print()
             print('Název nebo popis nemůže být prázdný!')
+            print()
         else:
             ukoly.append(f'{nazev} - {popis}')
+            print()
             print(f"Úkol '{nazev}' byl přidán.")
             return hlavni_menu()
 
@@ -70,10 +72,17 @@ def odstranit_ukol():
             index += 1
         print()
 
-        cislo = int(input('Zadejte číslo úkolu, který chcete odstranit: '))
-        cislo_ukolu = cislo - 1
+        try:
+            cislo = int(input('Zadejte číslo úkolu, který chcete odstranit: '))
+            cislo_ukolu = cislo - 1
+        except ValueError:
+            print()
+            print("Zadejte platné číslo!")
+            print()
+            continue
 
         if cislo > len(ukoly) or cislo <= 0:
+            print()
             print('Neplatné číslo úkolu, zkuste to znovu.')
             print()
         else:
